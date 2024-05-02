@@ -9,23 +9,25 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding-top: 70px; /* Ensures content isn't hidden behind the navbar */
-            background-color: white; /* Sets background to white */
-            color: black; /* Sets text color to black */
+            padding-top: 70px;
+            background-color: white;
+            color: black;
         }
         .navbar-brand, .nav-link {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: grey !important; /* Ensures all navbar text is grey */
+            color: grey !important;
         }
         .navbar {
-            background-color: #f8f9fa; /* Light grey background for the navbar */
+            background-color: #f8f9fa;
         }
         .nav-link:hover {
-            color: darkgrey !important; /* Darker grey on hover for links */
+            color: darkgrey !important;
         }
         #content {
             margin-top: 20px;
+        }
+        .modal-content {
+            background-color: white;
+            color: black;
         }
     </style>
 </head>
@@ -53,21 +55,18 @@
     </nav>
 
     <div class="container" id="content">
-        <!-- Default content for About Me will be loaded here -->
-        <h2>About Me</h2>
-        <p>Write a paragraph about your background, skills, and experiences. Highlight what sets you apart and why you're passionate about your work.</p>
+        <!-- Content loaded by JavaScript -->
     </div>
 
-    <!-- Bootstrap JS and jQuery -->
+    <!-- Bootstrap and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
     function loadContent(section) {
         const contentDiv = document.getElementById('content');
-        contentDiv.innerHTML = ''; // Clear existing content
+        contentDiv.innerHTML = '';
 
-        // Dynamically create the content based on the section
         if (section === 'about') {
             contentDiv.innerHTML = 
                 '<h2>About Me</h2>' +
@@ -76,20 +75,42 @@
         } else if (section === 'projects') {
             contentDiv.innerHTML = 
                 '<h2>My Projects</h2>' +
-                '<div><h3>MPC - APF Implementation</h3><p>Description of your MPC - APF project.</p></div>' +
-                '<div><h3>Deep Learning Project</h3><p>Description of your Deep Learning project.</p></div>' +
-                '<div><h3>IVC Project</h3><p>Description of your IVC project.</p></div>' +
-                '<div><h3>Machine Learning Project</h3><p>Description of your Machine Learning project.</p></div>';
+                createProjectModal('MPC - APF Implementation', 'Description of MPC - APF project.', 'mpcModal') +
+                createProjectModal('Deep Learning Project', 'Description of Deep Learning project.', 'deepLearningModal') +
+                createProjectModal('IVC Project', 'Description of IVC project.', 'ivcModal') +
+                createProjectModal('Machine Learning Project', 'Description of Machine Learning project.', 'mlModal');
+            $('.modal').modal('handleUpdate'); // Update modals dynamically
         } else if (section === 'contact') {
             contentDiv.innerHTML = 
                 '<h2>Contact Me & Resume</h2><p>Contact form and download resume link go here.</p>';
         }
     }
 
-    // Load About Me content initially
+    function createProjectModal(title, description, modalId) {
+        return `<div>
+            <h3>${title}</h3>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#${modalId}">View Details</button>
+            <div class="modal fade" id="${modalId}" tabindex="-1" role="dialog" aria-labelledby="${modalId}Label" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="${modalId}Label">${title}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>${description}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+    }
+
     window.onload = function() {
         loadContent('about');
     };
-</script>
+    </script>
 </body>
 </html>
