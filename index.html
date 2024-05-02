@@ -15,11 +15,8 @@
             font-size: 1.5rem;
             font-weight: bold;
         }
-        .section {
-            display: none; /* Initially hides all sections */
-        }
-        .active {
-            display: block; /* Shows the active section */
+        #content {
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -32,30 +29,22 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active" data-target="about">
-                        <a class="nav-link" href="javascript:void(0);">About Me</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);" onclick="loadContent('about')">About Me</a>
                     </li>
-                    <li class="nav-item" data-target="projects">
-                        <a class="nav-link" href="javascript:void(0);">Projects</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);" onclick="loadContent('projects')">Projects</a>
                     </li>
-                    <li class="nav-item" data-target="contact">
-                        <a class="nav-link" href="javascript:void(0);">Contact & Resume</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);" onclick="loadContent('contact')">Contact & Resume</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container section" id="about">
-        <!-- About Me content here -->
-    </div>
-
-    <div class="container section" id="projects">
-        <!-- Projects content here -->
-    </div>
-
-    <div class="container section" id="contact">
-        <!-- Contact & Resume content here -->
+    <div class="container" id="content">
+        <!-- Content will be loaded here based on the tab selection -->
     </div>
 
     <!-- Bootstrap JS and jQuery -->
@@ -63,27 +52,19 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const navItems = document.querySelectorAll('.nav-item');
-            navItems.forEach(item => {
-                item.addEventListener('click', function () {
-                    const targetId = this.getAttribute('data-target');
-                    const sections = document.querySelectorAll('.section');
-                    sections.forEach(section => {
-                        section.style.display = 'none'; // Hide all sections
-                    });
-                    document.getElementById(targetId).style.display = 'block'; // Show the target section
+        function loadContent(section) {
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = ''; // Clear existing content
 
-                    navItems.forEach(nav => {
-                        nav.classList.remove('active'); // Remove active class from all nav items
-                    });
-                    this.classList.add('active'); // Add active class to the clicked nav item
-                });
-            });
-
-            // Trigger click on the first tab to display it by default
-            navItems[0].click();
-        });
+            // Dynamically create the content based on the section
+            if (section === 'about') {
+                contentDiv.innerHTML = '<h2>About Me</h2><p>Write a paragraph about your background, skills, and experiences. Highlight what sets you apart and why you\'re passionate about your work.</p>';
+            } else if (section === 'projects') {
+                contentDiv.innerHTML = '<h2>My Projects</h2><p>Details about projects go here.</p>';
+            } else if (section === 'contact') {
+                contentDiv.innerHTML = '<h2>Contact Me & Resume</h2><p>Contact form and download resume link go here.</p>';
+            }
+        }
     </script>
 </body>
 </html>
