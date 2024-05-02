@@ -71,7 +71,10 @@
             if (section === 'about') {
                 contentDiv.innerHTML = '<h2>About Me</h2><p>Write a paragraph about your background, skills, and experiences. Highlight what sets you apart and why you\'re passionate about your work.</p>';
             } else if (section === 'projects') {
-                contentDiv.innerHTML = '<h2>My Projects</h2><p>Details about projects go here.</p>';
+                contentDiv.innerHTML = '<h2>My Projects</h2><div><h3>MPC - APF Implementation</h3><p>Description of your MPC - APF project.</p></div>' +
+                '<div><h3>Deep Learning Project</h3><p>Description of your Deep Learning project.</p></div>' +
+                '<div><h3>IVC Project</h3><p>Description of your IVC project.</p></div>' +
+                '<div><h3>Machine Learning Project</h3><p>Description of your Machine Learning project.</p></div>';
             } else if (section === 'contact') {
                 contentDiv.innerHTML = '<h2>Contact Me & Resume</h2><p>Contact form and download resume link go here.</p>';
             }
