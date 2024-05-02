@@ -10,19 +10,19 @@
         body {
             font-family: Arial, sans-serif;
             padding-top: 70px; /* Ensures content isn't hidden behind the navbar */
-            background-color: black; /* Sets background to black */
-            color: white; /* Sets text color to white */
+            background-color: white; /* Sets background to white */
+            color: black; /* Sets text color to black */
         }
-        .navbar-brand {
+        .navbar-brand, .nav-link {
             font-size: 1.5rem;
             font-weight: bold;
+            color: grey !important; /* Ensures all navbar text is grey */
         }
-        .navbar, .nav-link {
-            background-color: black;
-            color: white;
+        .navbar {
+            background-color: #f8f9fa; /* Light grey background for the navbar */
         }
         .nav-link:hover {
-            color: gray;
+            color: darkgrey !important; /* Darker grey on hover for links */
         }
         #content {
             margin-top: 20px;
@@ -30,7 +30,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Manasvini Srinivasan</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -84,4 +84,3 @@
     </script>
 </body>
 </html>
-
