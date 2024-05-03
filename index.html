@@ -93,37 +93,55 @@
                 </div>
             </div>
             <!-- Modal for Project -->
-            <div class="modal fade" id="apfMpcModal" tabindex="-1" aria-labelledby="apfMpcModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="apfMpcModalLabel">APF-MPC Space Debris Rendezvous</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="highlight">
-                                <h6>Abstract</h6>
-                                <p>This project proposes a hybrid Artificial Potential Field - Model Predictive Control (APF-MPC) method that navigates through a known, static space debris field to rendezvous with multiple large target static debris in a singular trip before returning to the start location.</p>
-                            </div>
-                            <h6>Technologies Used</h6>
-                            <p>MATLAB, APF, MPC</p>
-                            <div class="highlight">
-                                <h6>Challenges and Solutions</h6>
-                                <p>Addressed thruster saturation by optimizing control algorithms to reduce fuel consumption while maintaining maneuverability.</p>
-                            </div>
-                            <h6>Results</h6>
-                            <p>Improved trajectory optimization, enhanced fuel efficiency, and superior operational efficiency compared to conventional methods.</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        </div>
-                    </div>
+           <div class="modal fade" id="apfMpcModal" tabindex="-1" aria-labelledby="apfMpcModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="apfMpcModalLabel">APF-MPC Space Debris Rendezvous</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- Adding an image related to the project -->
+                <div class="modal-body">
+                <img src="MPC-outputs/A*.jpg.jpg" alt="Baseline A* algorithm" class="img-fluid mb-3">
+                <p>Description of initial A* outputs, showing preliminary results.</p>
+            
+                <img src="MPC-outputs/APF_all_targets.jpg" alt="APF with Targets" class="img-fluid mb-3">
+                <p>Trajectory plot with targets using Artificial Potential field.</p>
+            
+            
+                <img src="MPC-outputs/potential_planner_path.jpg" alt="Potential Planner Path Visualization" class="img-fluid mb-3">
+                <p>Visualization of potential paths planned by the system, highlighting optimal routes and obstacles.</p>
+            
+                <img src="MPC-outputs/refined_w_mpc.jpg" alt="Refined Paths with MPC" class="img-fluid mb-3">
+                <p>Final refined paths post-MPC adjustment, showcasing efficiency and precision in navigation.</p>
+                
+                    <img src="MPC-outputs/comparison.jpg" alt="APF-MPC Comparison" class="img-fluid mb-3">
+                <p>Comparative analysis between APF and MPC methodologies in handling complex trajectories.</p>
+            </div>
+                <div class="highlight">
+                    <h6>Abstract</h6>
+                    <p>This project proposes a hybrid Artificial Potential Field - Model Predictive Control (APF-MPC) method that navigates through a known, static space debris field to rendezvous with multiple large target static debris in a singular trip before returning to the start location.</p>
                 </div>
+                <h6>Technologies Used</h6>
+                <p>MATLAB, APF, MPC</p>
+                <div class="highlight">
+                    <h6>Challenges and Solutions</h6>
+                    <p>Addressed thruster saturation by optimizing control algorithms to reduce fuel consumption while maintaining maneuverability.</p>
+                </div>
+                <h6>Results</h6>
+                <p>Improved trajectory optimization, enhanced fuel efficiency, and superior operational efficiency compared to conventional methods.</p>
+                <!-- GitHub Link -->
+                <a href="https://github.com/ManasviniSrini/MultiDebris-Rendezvous-System" target="_blank" class="btn btn-dark">View on GitHub</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
+</div>
 
     <div class="container mt-5" id="contact">
         <h2 class="text-center">Contact Me & Resume</h2>
@@ -154,41 +172,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
- <div class="container mt-5" id="projects">
-        <h2 class="text-center">My Projects</h2>
-        <div class="row mt-3">
-            <!-- Project 1: APF-MPC Space Debris Rendezvous -->
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <img class="card-img-top" src="project1.jpg" alt="APF-MPC Space Debris Rendezvous">
-                    <div class="card-body">
-                        <h5 class="card-title">APF-MPC Space Debris Rendezvous</h5>
-                        <p class="card-text">An integrated approach using APF and MPC for autonomous space debris collection.</p>
-                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#apfMpcModal">More Details</button>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal for Project 1 -->
-            <div class="modal fade" id="apfMpcModal" tabindex="-1" aria-labelledby="apfMpcModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="apfMpcModalLabel">APF-MPC Space Debris Rendezvous</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button
-                </div>
-                <div class="modal-body">
-                    <div class="highlight">
-                        <h6>Abstract</h6>
-                        <p>This project proposes a hybrid Artificial Potential Field - Model Predictive Control (APF-MPC) method that navigates through a known, static space debris field to rendezvous with multiple large target static debris in a singular trip before returning to the start location.</p>
-                    </div>
-                    <h6>Technologies Used</h6>
-                    <p>MATLAB, APF, MPC</p>
-                    <div class="highlight">
-                        <h6>Challenges and Solutions</h6>
-                        <p>Addressed thruster saturation by optimizing control algorithms to reduce fuel consumption while maintaining maneuverability.</p>
-                    </div>
-                    <h6>Results</h6>
-                    <p>Improved trajectory optimization, enhanced fuel efficiency, and superior operational efficiency compared to conventional methods.</p>
-                </div>
