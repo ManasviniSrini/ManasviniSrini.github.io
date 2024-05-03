@@ -93,7 +93,7 @@
                 </div>
             </div>
             <!-- Modal for Project -->
-           <div class="modal fade" id="apfMpcModal" tabindex="-1" aria-labelledby="apfMpcModalLabel" aria-hidden="true">
+<div class="modal fade" id="apfMpcModal" tabindex="-1" aria-labelledby="apfMpcModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -142,6 +142,49 @@
         </div>
     </div>
 </div>
+ <!-- Modal for Project 2 -->
+<!-- Modal Trigger Button -->
+<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#textClassificationModal">More Details</button>
+
+<!-- Modal for Text Classification Project -->
+<div class="modal fade" id="textClassificationModal" tabindex="-1" aria-labelledby="textClassificationModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="textClassificationModalLabel">Advanced Text Classification Techniques</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="highlight">
+                    <h6>Abstract</h6>
+                    <p>This study explores and compares traditional machine learning and advanced deep learning techniques in text classification, highlighting the superior performance of BERT-based models over conventional models like Logistic Regression and SVM.</p>
+                </div>
+
+                <h6>Technologies Used</h6>
+                <p>Logistic Regression, SVM, BERT embeddings, LoRA fine-tuning, LSTM networks, CNNs.</p>
+                
+                <div class="highlight">
+                    <h6>Challenges and Solutions</h6>
+                    <p>One of the main challenges was integrating and fine-tuning BERT models for specific text classifications which required substantial computational resources. This was addressed by optimizing the training process and selectively fine-tuning layers to balance performance and computational efficiency.</p>
+                </div>
+                
+                <h6>Results</h6>
+                <p>The application of BERT embeddings significantly improved model accuracy in complex text classification tasks, demonstrating deep learning's potential over traditional methods in capturing nuanced language patterns.</p>
+                
+                <!-- GitHub Link -->
+                <a href="https://github.com/ManasviniSrini/TextClassification_KNN_LR" target="_blank" class="btn btn-dark">View on GitHub</a>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#textClassificationModal">More Details</button>
+
+            
 
     <div class="container mt-5" id="contact">
         <h2 class="text-center">Contact Me & Resume</h2>
@@ -165,6 +208,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
