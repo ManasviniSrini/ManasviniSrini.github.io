@@ -183,6 +183,50 @@
     </div>
 </div>
 <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#textClassificationModal">More Details</button>
+<!-- Modal Trigger Button -->
+<button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#vehicleDetectionModal">More Details</button>
+
+<!-- Modal for Vehicle Detection Project -->
+<div class="modal fade" id="vehicleDetectionModal" tabindex="-1" aria-labelledby="vehicleDetectionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="vehicleDetectionModalLabel">Distance Measurements for Real Time Vehicle Detection</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="highlight">
+                    <h6>Abstract</h6>
+                    <p>This project introduces a cost-effective method for enhancing vehicle safety by providing real-time distance measurements using a standard dash-cam. By integrating advanced object detection models, this system allows any vehicle, regardless of its manufacturing date, to have sophisticated traffic awareness capabilities.</p>
+                </div>
+
+                <h6>Technologies Used</h6>
+                <p>The system utilizes YOLOv7 for object detection, which is integrated with dash-cam footage to detect vehicles and estimate distances based on the dimensions of their bounding boxes.</p>
+                
+                <div class="highlight">
+                    <h6>Challenges and Solutions</h6>
+                    <p>Major challenges included optimizing the object detection model for real-time processing and achieving accurate distance measurements from monocular video footage. Solutions involved fine-tuning the YOLOv7 model on vehicle-specific datasets and developing a calibration method to convert pixel measurements into real-world distances.</p>
+                </div>
+                
+                <h6>Results</h6>
+                <p>The enhanced detection system successfully provides accurate distance estimations, significantly improving situational awareness for drivers. Comparative tests demonstrated that the system performs reliably across different vehicle types and under various environmental conditions.</p>
+                <img src="MPC-outputs/dl_images.png" alt="Baseline A* algorithm" class="img-fluid mb-3">
+                <p>Image results.</p>
+            
+                <img src="MPC-outputs/dl_results.png" alt="APF with Targets" class="img-fluid mb-3">
+                <p>Analytical results.</p>
+            </div>
+            <div class="modal-footer">
+                <!-- Video Link Button -->
+                <a href="https://drive.google.com/file/d/1SRET4QOCTXFdSBbtvvHPV36e6J4N93hX/view?usp=sharing" target="_blank" class="btn btn-primary">Watch Video</a>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
             
 
