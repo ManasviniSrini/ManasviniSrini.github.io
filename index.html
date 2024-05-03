@@ -77,205 +77,26 @@
             </div>
         </div>
     </div>
-<div class="container mt-5" id="projects">
-    <h2 class="text-center">My Projects</h2>
-    <div class="row mt-3">
-        <!-- Card for APF-MPC Space Debris Rendezvous -->
-        <div class="col-md-4 col-sm-6 mb-4">
-            <div class="card h-100">
-                <img class="card-img-top" src="project1.jpg" alt="APF-MPC Space Debris Rendezvous">
-                <div class="card-body">
-                    <h5 class="card-title">APF-MPC Space Debris Rendezvous</h5>
-                    <p class="card-text">An integrated approach using APF and MPC for autonomous space debris collection.</p>
-                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#apfMpcModal">More Details</button>
-                </div>
-            </div>
-        </div>
-        <!-- Modal for APF-MPC Space Debris Rendezvous -->
-        <div class="modal fade" id="apfMpcModal" tabindex="-1" aria-labelledby="apfMpcModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="apfMpcModalLabel">APF-MPC Space Debris Rendezvous</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Image related to the project -->
-                        <img src="MPC-outputs/A*.jpg" alt="Baseline A* algorithm" class="img-fluid mb-3">
-                        <p>Description of initial A* outputs, showing preliminary results.</p>
 
-                        <img src="MPC-outputs/APF_all_targets.jpg" alt="APF with Targets" class="img-fluid mb-3">
-                        <p>Trajectory plot with targets using Artificial Potential field.</p>
-
-                        <img src="MPC-outputs/potential_planner_path.jpg" alt="Potential Planner Path Visualization" class="img-fluid mb-3">
-                        <p>Visualization of potential paths planned by the system, highlighting optimal routes and obstacles.</p>
-
-                        <img src="MPC-outputs/refined_w_mpc.jpg" alt="Refined Paths with MPC" class="img-fluid mb-3">
-                        <p>Final refined paths post-MPC adjustment, showcasing efficiency and precision in navigation.</p>
-
-                        <img src="MPC-outputs/comparison.jpg" alt="APF-MPC Comparison" class="img-fluid mb-3">
-                        <p>Comparative analysis between APF and MPC methodologies in handling complex trajectories.</p>
-
-                        <div class="highlight">
-                            <h6>Abstract</h6>
-                            <p>This project proposes a hybrid Artificial Potential Field - Model Predictive Control (APF-MPC) method that navigates through a known, static space debris field to rendezvous with multiple large target static debris in a singular trip before returning to the start location.</p>
-                        </div>
-                        <h6>Technologies Used</h6>
-                        <p>MATLAB, APF, MPC</p>
-                        <div class="highlight">
-                            <h6>Challenges and Solutions</h6>
-                            <p>Addressed thruster saturation by optimizing control algorithms to reduce fuel consumption while maintaining maneuverability.</p>
-                        </div>
-                        <h6>Results</h6>
-                        <p>Improved trajectory optimization, enhanced fuel efficiency, and superior operational efficiency compared to conventional methods.</p>
-                        <a href="https://github.com/ManasviniSrini/MultiDebris-Rendezvous-System" target="_blank" class="btn btn-dark">View on GitHub</a>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+    <!-- Projects Section -->
+    <div class="container mt-5" id="projects">
+        <h2 class="text-center">My Projects</h2>
+        <div class="row mt-3">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="project1.jpg" alt="APF-MPC Space Debris Rendezvous">
+                    <div class="card-body">
+                        <h5 class="card-title">APF-MPC Space Debris Rendezvous</h5>
+                        <p class="card-text">An integrated approach using APF and MPC for autonomous space debris collection.</p>
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#apfMpcModal">More Details</button>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Repeat this pattern for additional projects with their own unique IDs and content -->
-    </div>
-     <div class="col-md-4 col-sm-6 mb-4">
-            <div class="card h-100">
-                <img class="card-img-top" src="project2.jpg" alt="Text Classification">
-                <div class="card-body">
-                    <h5 class="card-title">Advanced Text Classification Techniques</h5>
-                    <p class="card-text">Exploring deep learning techniques for text classification, utilizing BERT models to outperform traditional methods.</p>
-                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#textClassificationModal">More Details</button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Modal for Text Classification Project -->
-         <div class="col-lg-4 col-md-6 mb-4">
-            <div class="card h-100">
-                <img class="card-img-top" src="project2.jpg" alt="Text Classification">
-                <div class="card-body">
-                    <h5 class="card-title">Advanced Text Classification Techniques</h5>
-                    <p class="card-text">Exploring deep learning techniques for text classification, utilizing BERT models to outperform traditional methods.</p>
-                    <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#textClassificationModal">More Details</button>
-                </div>
-            </div>
-        </div>
-        <div class="modal fade" id="textClassificationModal" tabindex="-1" aria-labelledby="textClassificationModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="textClassificationModalLabel">Advanced Text Classification Techniques</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="highlight">
-                            <h6>Abstract</h6>
-                            <p>This study explores and compares traditional machine learning and advanced deep learning techniques in text classification, highlighting the superior performance of BERT-based models over conventional models like Logistic Regression and SVM.</p>
-                        </div>
-                        <h6>Technologies Used</h6>
-                        <p>Logistic Regression, SVM, BERT embeddings, LoRA fine-tuning, LSTM networks, CNNs.</p>
-                        <div class="highlight">
-                            <h6>Challenges and Solutions</h6>
-                            <p>One of the main challenges was integrating and fine-tuning BERT models for specific text classifications which required substantial computational resources. This was addressed by optimizing the training process and selectively fine-tuning layers to balance performance and computational efficiency.</p>
-                        </div>
-                        <h6>Results</h6>
-                        <p>The application of BERT embeddings significantly improved model accuracy in complex text classification tasks, demonstrating deep learning's potential over traditional methods in capturing nuanced language patterns.</p>
-                        <a href="https://github.com/ManasviniSrini/TextClassification_KNN_LR" target="_blank" class="btn btn-dark">View on GitHub</a>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
+            <!-- Repeat pattern for additional projects -->
         </div>
     </div>
-</div>
-<div class="container mt-5" id="projects">
-    <h2 class="text-center">My Projects</h2>
-    <div class="row mt-3">
-        <!-- Assuming other project cards are correctly placed here -->
 
-        <!-- Button for Text Classification Project Modal -->
-        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#textClassificationModal">More Details on Text Classification</button>
-
-        
-
-        <!-- Modal for Vehicle Detection Project -->
-<!--         <div class="modal fade" id="vehicleDetectionModal" tabindex="-1" aria-labelledby="vehicleDetectionModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="vehicleDetectionModalLabel">Distance Measurements for Real Time Vehicle Detection</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="highlight">
-                            <h6>Abstract</h6>
-                            <p>This project introduces a cost-effective method for enhancing vehicle safety by providing real-time distance measurements using a standard dash-cam. By integrating advanced object detection models, this system allows any vehicle, regardless of its manufacturing date, to have sophisticated traffic awareness capabilities.</p>
-                        </div>
-
-                        <h6>Technologies Used</h6>
-                        <p>The system utilizes YOLOv7 for object detection, which is integrated with dash-cam footage to detect vehicles and estimate distances based on the dimensions of their bounding boxes.</p>
-                        
-                        <div class="highlight">
-                            <h6>Challenges and Solutions</h6>
-                            <p>Major challenges included optimizing the object detection model for real-time processing and achieving accurate distance measurements from monocular video footage. Solutions involved fine-tuning the YOLOv7 model on vehicle-specific datasets and developing a calibration method to convert pixel measurements into real-world distances.</p>
-                        </div>
-                        
-                        <h6>Results</h6>
-                        <p>The enhanced detection system successfully provides accurate distance estimations, significantly improving situational awareness for drivers. Comparative tests demonstrated that the system performs reliably across different vehicle types and under various environmental conditions.</p>
-                        <img src="MPC-outputs/dl_images.png" alt="Baseline A* algorithm" class="img-fluid mb-3">
-                        <p>Image results.</p>
-                    
-                        <img src="MPC-outputs/dl_results.png" alt="APF with Targets" class="img-fluid mb-3">
-                        <p>Analytical results.</p>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="https://drive.google.com/file/d/1SRET4QOCTXFdSBbtvvHPV36e6J4N93hX/view?usp=sharing" target="_blank" class="btn btn-primary">Watch Video</a>
-                        <a href="" target="_blank" class="btn btn-dark">View on GitHub</a>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="musculoskeletalModal" tabindex="-1" aria-labelledby="musculoskeletalModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="musculoskeletalModalLabel">Abnormality Detection in Musculoskeletal Radiographs</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <a href="https://github.com/ManasviniSrini/Radiograph-Abnormality-Detector" target="_blank" class="btn btn-dark" style="margin-left: auto;">View on GitHub</a>
-            </div>
-            <div class="modal-body">
-                <h6>Task</h6>
-                <p>Design of an automated detection system for identifying fractures, lesions, and joint abnormalities in musculoskeletal radiographs.</p>
-                <h6>Approach</h6>
-                <p>Integration of CNNs with Vision Transformers to enhance detection accuracy across varied imaging conditions.</p>
-                <h6>Challenges and Solutions</h6>
-                <p>Addressing the subtleties of anatomical structures and variations in imaging techniques through advanced machine learning models.</p>
-                <h6>Results</h6>
-                <p>Evaluation based on sensitivity and specificity metrics, aiming to surpass established benchmarks in medical imaging diagnostics.</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-            
-
+    <!-- Contact Section -->
     <div class="container mt-5" id="contact">
         <h2 class="text-center">Contact Me & Resume</h2>
         <div class="row justify-content-center">
@@ -297,8 +118,7 @@
                 </div>
             </div>
         </div>
-    </div> -->
-    
+    </div>
 
     <!-- Bootstrap JS and jQuery -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
