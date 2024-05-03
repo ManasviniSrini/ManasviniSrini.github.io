@@ -9,30 +9,28 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            padding-top: 70px;
-            background-color: white;
-            color: black;
+            padding-top: 70px; /* Ensures content isn't hidden behind the navbar */
         }
-        .navbar-brand, .nav-link {
-            color: grey !important;
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
         }
-        .navbar {
+        .modal-header, .modal-footer {
             background-color: #f8f9fa;
         }
-        .nav-link:hover {
-            color: darkgrey !important;
-        }
-        #content {
-            margin-top: 20px;
+        .modal-body {
+            background-color: #ffffff;
         }
         .modal-content {
-            background-color: white;
-            color: black;
+            border-radius: 10px;
+        }
+        .modal-dialog {
+            margin-top: 5%;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Manasvini Srinivasan</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,77 +39,87 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0);" onclick="loadContent('about')">About Me</a>
+                        <a class="nav-link" href="#about">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0);" onclick="loadContent('projects')">Projects</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void(0);" onclick="loadContent('contact')">Contact & Resume</a>
+                        <a class="nav-link" href="#contact">Contact & Resume</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container" id="content">
-        <!-- Content loaded by JavaScript -->
-    </div>
-
-    <!-- Bootstrap and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-    function loadContent(section) {
-        const contentDiv = document.getElementById('content');
-        contentDiv.innerHTML = '';
-
-        if (section === 'about') {
-            contentDiv.innerHTML = 
-                '<h2>About Me</h2>' +
-                '<img src="images/headshot.png" class="img-fluid rounded-circle" alt="Manasvini Srinivasan" style="width: 150px; height: auto; margin-bottom: 20px;">' +
-                '<p>Write a paragraph about your background, skills, and experiences. Highlight what sets you apart and why you\'re passionate about your work.</p>';
-        } else if (section === 'projects') {
-            contentDiv.innerHTML = 
-                '<h2>My Projects</h2>' +
-                createProjectModal('MPC - APF Implementation', 'Description of MPC - APF project.', 'mpcModal') +
-                createProjectModal('Deep Learning Project', 'Description of Deep Learning project.', 'deepLearningModal') +
-                createProjectModal('IVC Project', 'Description of IVC project.', 'ivcModal') +
-                createProjectModal('Machine Learning Project', 'Description of Machine Learning project.', 'mlModal');
-            $('.modal').modal('handleUpdate'); // Update modals dynamically
-        } else if (section === 'contact') {
-            contentDiv.innerHTML = 
-                '<h2>Contact Me & Resume</h2><p>Contact form and download resume link go here.</p>';
-        }
-    }
-
-    function createProjectModal(title, description, modalId) {
-        return `<div>
-            <h3>${title}</h3>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#${modalId}">View Details</button>
-            <div class="modal fade" id="${modalId}" tabindex="-1" role="dialog" aria-labelledby="${modalId}Label" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+    <div class="container mt-5" id="projects">
+        <h2 class="text-center">My Projects</h2>
+        <div class="row mt-3">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <img class="card-img-top" src="project1.jpg" alt="APF-MPC Space Debris Rendezvous">
+                    <div class="card-body">
+                        <h5 class="card-title">APF-MPC Space Debris Rendezvous</h5>
+                        <p class="card-text">An integrated approach using APF and MPC for autonomous space debris collection.</p>
+                        <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#apfMpcModal">More Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal for Project -->
+            <div class="modal fade" id="apfMpcModal" tabindex="-1" aria-labelledby="apfMpcModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="${modalId}Label">${title}</h5>
+                            <h5 class="modal-title" id="apfMpcModalLabel">APF-MPC Space Debris Rendezvous</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            <p>${description}</p>
+                            <h6>Abstract</h6>
+                            <p>This project proposes a hybrid Artificial Potential Field - Model Predictive Control (APF-MPC) method that navigates through a known, static space debris field to rendezvous with multiple large target static debris in a singular trip before returning to the start location.</p>
+                            <h6>Technologies Used</h6>
+                            <p>MATLAB, APF, MPC</p>
+                            <h6>Challenges and Solutions</h6>
+                            <p>Addressed thruster saturation by optimizing control algorithms to reduce fuel consumption while maintaining maneuverability.</p>
+                            <h6>Results</h6>
+                            <p>Improved trajectory optimization, enhanced fuel efficiency, and superior operational efficiency compared to conventional methods.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>`;
-    }
+        </div>
+    </div>
 
-    window.onload = function() {
-        loadContent('about');
-    };
-    </script>
+    <div class="container mt-5" id="contact">
+        <h2 class="text-center">Contact Me & Resume</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" placeholder="Your Email">
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Send</button>
+                </form>
+                <div class="mt-3">
+                    <a href="your-resume.pdf" target="_blank" class="btn btn-secondary btn-block">Download Resume</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
